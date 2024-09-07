@@ -8,12 +8,16 @@ export default {
     extend: {
       animation: {
         'fade-in': 'fadeIn 2s ease-out',
+        'scroll': 'scroll 30s linear infinite', // Add the scroll animation here
       },
       keyframes: {
-        
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
       fontFamily: {
@@ -22,7 +26,6 @@ export default {
       colors: {
         'dark-green': '#004d00', // Define your dark green color
       },
-      
     },
   },
   plugins: [],
