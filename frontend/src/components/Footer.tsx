@@ -1,0 +1,41 @@
+import React from 'react';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-950 text-white py-4">
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between items-center">
+          {/* Mail Section */}
+          <div className="flex-1 text-center md:text-left">
+            <a 
+              href="mailto:info@example.com" 
+              className="text-lg font-pixel hover:text-green-300 transition-colors"
+            >
+              abcd@gmail.com
+            </a>
+          </div>
+
+          {/* Copyright Section */}
+          <div className="flex-1 text-center">
+            <p className="text-sm font-pixel">
+              &copy; {new Date().getFullYear()} PokéNFT. All rights reserved.
+            </p>
+          </div>
+
+          {/* Twitter Section */}
+          <div className="flex-1 text-center md:text-right">
+            <a 
+              href="https://twitter.com/yourprofile" 
+              className="text-xl font-pixel hover:text-green-300 transition-colors" 
+              aria-label="Twitter"
+            >
+              Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

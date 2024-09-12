@@ -3,6 +3,9 @@ import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
 
 const Navbar: React.FC = () => {
+
+
+
   return (
     <div className="relative w-3/5 mx-auto mt-6 flex justify-between items-center p-4 rounded-full border-4 border-gray-800 bg-gradient-to-r from-green-800 via-gray-900 to-black shadow-lg hover:shadow-xl transition-shadow duration-300">
       

@@ -21,7 +21,7 @@ const images = [
 
 const InfiniteCardCarousel: React.FC = () => {
   return (
-    <div className="overflow-hidden w-full h-48">
+    <div className="overflow-hidden w-4/5 h-48 mx-auto">
       <div className="flex animate-scroll">
         {images.concat(images).map((src, index) => (
           <div
