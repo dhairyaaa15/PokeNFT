@@ -6,7 +6,7 @@ const MainMarketplace: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'evolving' | 'marketplace'>('evolving');
 
   return (
-    <div className="w-3/5 mx-auto mt-10 p-6 rounded-lg bg-gray-900 text-white font-pixel shadow-lg relative">
+    <div className="mx-auto mt-9 p-5 rounded-lg bg-gray-900 text-white font-pixel shadow-lg relative">
       {/* Tabs Section */}
       <div className="flex border-b border-gray-600 mb-6">
         <div

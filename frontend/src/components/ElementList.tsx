@@ -3,14 +3,14 @@ import { FaFire, FaWater, FaBolt, FaPlus } from 'react-icons/fa'; // Example ico
 
 const ElementList: React.FC = () => {
   return (
-    <div className="w-1/5 bg-gray-800 text-white p-2 rounded-lg flex flex-col space-y-2 justify-center">
+    <div className=" bg-gray-800 text-white p-2 rounded-lg flex flex-col space-y-2 justify-center">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <FaFire className="text-red-500 text-2xl" /> {/* Adjusted size */}
           <span className="text-xl font-pixel">Fire</span> {/* Adjusted text size */}
         </div>
         <button className="bg-green-500 p-2 rounded-full hover:bg-green-600 transition-colors">
-          <FaPlus className="text-white text-lg" /> {/* Adjusted size */}
+          <FaPlus className="text-white text-sm" /> {/* Adjusted size */}
         </button>
       </div>
       <div className="flex items-center justify-between">
@@ -19,7 +19,7 @@ const ElementList: React.FC = () => {
           <span className="text-xl font-pixel">Water</span> {/* Adjusted text size */}
         </div>
         <button className="bg-green-500 p-2 rounded-full hover:bg-green-600 transition-colors">
-          <FaPlus className="text-white text-lg" /> {/* Adjusted size */}
+          <FaPlus className="text-white text-sm" /> {/* Adjusted size */}
         </button>
       </div>
       <div className="flex items-center justify-between">
@@ -28,7 +28,7 @@ const ElementList: React.FC = () => {
           <span className="text-xl font-pixel">Electricity</span> {/* Adjusted text size */}
         </div>
         <button className="bg-green-500 p-2 rounded-full hover:bg-green-600 transition-colors">
-          <FaPlus className="text-white text-lg" /> {/* Adjusted size */}
+          <FaPlus className="text-white text-sm" /> {/* Adjusted size */}
         </button>
       </div>
     </div>

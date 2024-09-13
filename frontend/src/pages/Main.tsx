@@ -1,5 +1,5 @@
 import ElementList from '../components/ElementList';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import InfiniteCardCarousel from '../components/InfiniteCardCarousel';
 import Marketplace from '../components/MainMarketplace';
 import Navbar from '../components/Navbar';
@@ -16,9 +16,14 @@ function Main() {
         <InfiniteCardCarousel />
       </div>
       
-      <div className="container mx-auto px-4 mt-10 mb-16"> {/* Added mb-16 for spacing */}
+      
+      <div className="flex flex-row justify-center items-start container mx-auto px-2 mt-3 mb-16"> {/* Added mb-16 for spacing */}
+        <div className='w-6/10'>
         <Marketplace />
+        </div>
+        <div className='w-3/10 mt-10 ml-14'>
         <ElementList/>
+        </div>
       </div>
       <Footer />
     </div>
