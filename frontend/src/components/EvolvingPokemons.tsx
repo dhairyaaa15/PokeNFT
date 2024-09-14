@@ -39,7 +39,7 @@ const evolvingPokemonsData = [
 
 const EvolvingPokemons: React.FC = () => {
   return (
-    <div className="flex flex-col space-x-6 py-4 overflow-y-auto max-h-[550px] scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-gray-800 hover:scrollbar-thumb-green-300">
+    <div className="flex flex-col space-x-6 py-4 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-gray-800 hover:scrollbar-thumb-green-300">
       {evolvingPokemonsData.map((pokemon, index) => (
         <EvolutionCard key={index} pokemon={pokemon} />
       ))}

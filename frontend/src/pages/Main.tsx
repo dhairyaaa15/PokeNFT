@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import InfiniteCardCarousel from '../components/InfiniteCardCarousel';
 import Marketplace from '../components/MainMarketplace';
 import Navbar from '../components/Navbar';
+import NftCarousel from '../components/NftCarousel';
 import Staticinfo from '../components/Staticinfo';
 
 function Main() {
@@ -23,6 +24,7 @@ function Main() {
         </div>
         <div className='w-3/10 mt-10 ml-14'>
         <ElementList/>
+        <NftCarousel/>
         </div>
       </div>
       <Footer />
