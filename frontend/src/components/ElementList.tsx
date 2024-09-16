@@ -3,7 +3,7 @@ import { FaFire, FaWater, FaBolt, FaPlus } from 'react-icons/fa'; // Example ico
 
 const ElementList: React.FC = () => {
   return (
-    <div className=" bg-gray-800 text-white p-2 rounded-lg flex flex-col space-y-2 justify-center">
+    <div className=" bg-gray-800 bg-opacity-80 text-white p-2 rounded-lg flex flex-col space-y-2 justify-center">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <FaFire className="text-red-500 text-2xl" /> {/* Adjusted size */}

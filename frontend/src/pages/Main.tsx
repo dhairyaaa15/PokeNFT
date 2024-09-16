@@ -10,24 +10,27 @@ function Main() {
   return (
     <div className="min-h-screen bg-black text-white pt-6">
       <Navbar />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-center">
         <Staticinfo />
       </div>
-      <div className="items-center mt-10">
+      <div className="container mx-auto px-4 mt-10">
         <InfiniteCardCarousel />
       </div>
-      
-      
-      <div className="flex flex-row justify-center items-start container mx-auto px-2 mt-3 mb-16"> {/* Added mb-16 for spacing */}
-        <div className='w-6/10'>
-        <Marketplace />
-        </div>
-        <div className='w-3/10 mt-10 ml-14'>
-        <ElementList/>
-        <NftCarousel/>
+
+      <div className="container mx-auto px-2 mt-10 flex justify-center">
+        <div className="w-full max-w-screen-xl flex flex-row justify-between items-start space-x-8">
+          <div className="w-7.5/10"> {/* Adjusted width */}
+            <Marketplace />
+          </div>
+          <div className="w-2.5/10 flex flex-col space-y-8 mt-9"> {/* Adjusted width and spacing */}
+            <ElementList />
+            <NftCarousel />
+          </div>
         </div>
       </div>
+      <div className='mt-7'>
       <Footer />
+      </div>
     </div>
   );
 }
