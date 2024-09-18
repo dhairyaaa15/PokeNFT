@@ -13,10 +13,12 @@ import wartortle from '../assets/wartortle.jpeg'
 const evolvingPokemonsData = [
   {
     type: 'Electricity',
+    
     stages: [
       {
         name: 'Pichu',
         image: pichu,
+        price: 1.04,
         description: 'A baby electric-type Pokémon.',
         longDescription: [
           'A small yellow Pokémon with big, rounded ears and a tiny tail.',
@@ -57,10 +59,12 @@ const evolvingPokemonsData = [
   },
   {
     type: 'Fire',
+    
     stages: [
       {
         name: 'Charmander',
         image: charminder,
+        price: 0.77,
         description: 'A baby fire-type Pokémon.',
         longDescription: [
           'Charmander is a small lizard-like Pokémon with an orange body and fiery tail.',
@@ -101,10 +105,12 @@ const evolvingPokemonsData = [
   },
   {
     type: 'Water',
+    
     stages: [
       {
         name: 'Squirtle',
         image: squirtle,
+        price: 1.09,
         description: 'A baby water-type Pokémon.',
         longDescription: [
           'Squirtle is a small, blue turtle with a rounded shell that protects it.',

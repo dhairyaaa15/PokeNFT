@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 interface Stage {
+  price: number;
   stage: number;
   name: string;
   image: string;
@@ -18,6 +19,17 @@ const PokemonContext = createContext<PokemonContextType | undefined>(undefined);
 
 export const PokemonProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [stages, setStages] = useState<Stage[] | null>(null);
+
+  useEffect(() => {
+    // Simulate API call to fetch Pokémon stages
+    const fetchStages = async () => {
+      const response = await fetch('/api/pokemon-stages'); // Update with actual API endpoint
+      const data: Stage[] = await response.json(); // Assume the API returns an array of Stage objects
+      setStages(data);
+    };
+
+    fetchStages();
+  }, []);
 
   return (
     <PokemonContext.Provider value={{ stages, setStages }}>

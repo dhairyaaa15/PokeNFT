@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 import { usePokemonContext } from './PokemonContext'; // Update path if necessary
+import { FaTimes } from 'react-icons/fa'; // Import the cross icon from react-icons
 
 const NftCarousel: React.FC = () => {
   const { stages } = usePokemonContext();
   const [currentStage, setCurrentStage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (!stages || stages.length === 0) {
     return (
-    <div className="p-6 bg-gray-800 rounded-lg h-[800px] flex flex-col items-center justify-center text-white shadow-lg border-2 border-green-500">
-      <h2 className="text-3xl font-pixel mb-6 text-green-300 text-center">
-        Pokémon Carousel
-      </h2>
-      <p className="text-center mb-4 font-pixel text-xl leading-relaxed">
-        It is always better to know your Pokémon before taking a step to buy them.
-      </p>
-      <p className="text-center font-pixel text-xl leading-relaxed">
-        Choose a Pokémon and click on the <span className="text-yellow-400">"Know More"</span> button to get the details of that respective Pokémon, stage-wise.
-      </p>
-    </div>
-  );
+      <div className="p-6 bg-gray-800 rounded-lg h-[800px] flex flex-col items-center justify-center text-white shadow-lg border-2 border-green-500">
+        <h2 className="text-3xl font-pixel mb-6 text-green-300 text-center">
+          Pokémon Carousel
+        </h2>
+        <p className="text-center mb-4 font-pixel text-xl leading-relaxed">
+          It is always better to know your Pokémon before taking a step to buy them.
+        </p>
+        <p className="text-center font-pixel text-xl leading-relaxed">
+          Choose a Pokémon and click on the <span className="text-yellow-400">"Know More"</span> button to get the details of that respective Pokémon, stage-wise.
+        </p>
+      </div>
+    );
   }
 
   const handlePrevious = () => {
@@ -30,6 +32,14 @@ const NftCarousel: React.FC = () => {
   };
 
   const stage = stages[currentStage];
+
+  const handleBuyClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="p-2 bg-gray-800 bg-opacity-80 rounded-lg h-[800px] flex flex-col items-center">
@@ -80,10 +90,50 @@ const NftCarousel: React.FC = () => {
 
       {/* Buy Button */}
       <button
+        onClick={handleBuyClick}
         className="w-full py-2 bg-green-600 text-white rounded-lg font-pixel font-bold hover:bg-green-500 transition"
       >
         BUY NFT
       </button>
+
+      {/* Modal for Buy NFT */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full relative">
+            {/* Close Icon */}
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-2 right-2 text-gray-400 hover:text-white transition"
+            >
+              <FaTimes size={24} />
+            </button>
+            <h2 className="text-2xl font-pixel mb-4 text-green-300 text-center">
+              Buy {stage.name} (Stage 1)
+            </h2>
+            <div className="flex items-center justify-center mb-4">
+              <img
+                src={stages[0].image} // Stage 1 image
+                alt="Stage 1 Pokémon"
+                className="w-52 h-52 object-cover rounded-sm"
+              />
+            </div>
+            <p className="text-yellow-400 text-center font-pixel mb-2">
+              When you purchase this card, you will start with Stage 1.
+            </p>
+            <p className="text-white text-center font-pixel mb-4">
+              Price: {stages[0].price} Apt
+            </p>
+            <div className="flex justify-center">
+              <button
+                onClick={handleCloseModal}
+                className="w-full py-2 bg-green-600 text-white rounded-lg font-pixel font-bold hover:bg-green-500 transition"
+              >
+                Proceed
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
