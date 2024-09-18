@@ -8,10 +8,10 @@ const Footer: React.FC = () => {
           {/* Mail Section */}
           <div className="flex-1 text-center md:text-left">
             <a 
-              href="mailto:info@example.com" 
+              href="mailto:dhairyachawda5@gmail.com" 
               className="text-lg font-pixel hover:text-green-300 transition-colors"
             >
-              abcd@gmail.com
+              Mail
             </a>
           </div>
 
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           {/* Twitter Section */}
           <div className="flex-1 text-center md:text-right">
             <a 
-              href="https://twitter.com/yourprofile" 
+              href="https://x.com/dhairya_15_" 
               className="text-xl font-pixel hover:text-green-300 transition-colors" 
               aria-label="Twitter"
             >
