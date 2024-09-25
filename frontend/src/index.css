@@ -3,3 +3,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add this global CSS for full background coverage and no white lines */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Match your desired background color */
+  overflow-x: hidden; /* Prevent any horizontal scrolling */
+}
+
+/* Ensure body text uses the correct font */
+body {
+  font-family: 'Press Start 2P', cursive;
+}

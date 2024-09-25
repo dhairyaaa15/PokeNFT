@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { usePokemonContext } from './PokemonContext'; // Update path if necessary
-import { FaTimes } from 'react-icons/fa'; // Import the cross icon from react-icons
+import { FaTimes } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 
 const NftCarousel: React.FC = () => {
   const { stages } = usePokemonContext();
   const [currentStage, setCurrentStage] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate
 
   if (!stages || stages.length === 0) {
     return (
@@ -39,6 +41,11 @@ const NftCarousel: React.FC = () => {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleProceed = () => {
+    setIsModalOpen(false);
+    navigate('/myprofile'); // Navigate to Myprofile.tsx
   };
 
   return (
@@ -125,7 +132,7 @@ const NftCarousel: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <button
-                onClick={handleCloseModal}
+                onClick={handleProceed} // Navigate to Myprofile.tsx
                 className="w-full py-2 bg-green-600 text-white rounded-lg font-pixel font-bold hover:bg-green-500 transition"
               >
                 Proceed

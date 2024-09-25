@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
           <>
             {/* My Profile Button */}
             <button 
-              onClick={() => navigate('/profile')}
+              onClick={() => navigate('/Myprofile')}
               className="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-500 transition-all duration-300 font-pixel text-sm tracking-wide shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-green-400"
             >
               My Profile

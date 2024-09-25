@@ -16,7 +16,7 @@ const evolvingPokemonsData = [
     
     stages: [
       {
-        name: 'Pichu',
+        name: 'Pichu',  
         image: pichu,
         price: 1.04,
         description: 'A baby electric-type Pokémon.',
