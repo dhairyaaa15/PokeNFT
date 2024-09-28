@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProfileEvolvePok from './ProfileEvolvePok';
 
 const ProfileMarket: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'evolving'>('evolving');
+  const [, setActiveTab] = useState<'evolving'>('evolving');
 
   return (
     <div className="h-[750px] w-[80%] max-w-[2000px] mx-auto p-5 bg-gray-900 text-white font-pixel shadow-lg rounded-lg"> {/* Adjusted width to 80% */}

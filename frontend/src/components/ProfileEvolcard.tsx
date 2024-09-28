@@ -1,8 +1,20 @@
 import React from 'react';
-import { Pokemon } from './EvolutionCard'; // Update path if necessary
+// import  Pokemon  from './EvolutionCard'; // Update path if necessary
+
+interface Stage {
+  image: string;
+  name: string;
+  description: string;
+  time: string;
+}
+
+interface PokemonType {
+  type: string;
+  stages: Stage[];
+}
 
 interface ProfileEvolCardProps {
-  pokemon: Pokemon;
+  pokemon: PokemonType;
 }
 
 const ProfileEvolCard: React.FC<ProfileEvolCardProps> = ({ pokemon }) => {

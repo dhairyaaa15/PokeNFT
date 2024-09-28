@@ -1,6 +1,20 @@
 import React from 'react';
 import { usePokemonContext } from './PokemonContext'; // Update path if necessary
-import { Pokemon } from './EvolutionCard'; // Update path if necessary
+
+interface Stage {
+  name: string;
+  image: string;
+  description: string;
+  longDescription: string[];
+  time: string;
+  stage: number;
+  price?: number; // Make price optional
+}
+
+interface Pokemon {
+  type: string;
+  stages: Stage[];
+}
 
 interface EvolutionCardProps {
   pokemon: Pokemon;
