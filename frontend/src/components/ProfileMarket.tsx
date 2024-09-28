@@ -5,7 +5,7 @@ const ProfileMarket: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'evolving'>('evolving');
 
   return (
-    <div className="h-[750px] w-full max-w-[2000px] p-5 bg-gray-900 text-white font-pixel shadow-lg rounded-lg"> {/* Adjusted height and max-width */}
+    <div className="h-[750px] w-[80%] max-w-[2000px] mx-auto p-5 bg-gray-900 text-white font-pixel shadow-lg rounded-lg"> {/* Adjusted width to 80% */}
       {/* Tabs Section */}
       <div className="flex border-b border-gray-600 mb-4">
         <div

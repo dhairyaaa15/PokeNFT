@@ -8,7 +8,7 @@ const ProfileElement: React.FC = () => {
   const electricityCount = 7;
 
   return (
-    <div className="bg-gray-800 bg-opacity-80 text-white p-2 rounded-lg flex flex-col space-y-2 justify-center">
+    <div className="w-[80%] mx-auto bg-gray-800 bg-opacity-80 text-white p-2 rounded-lg flex flex-col space-y-2 justify-center">
       {/* Fire Element */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
