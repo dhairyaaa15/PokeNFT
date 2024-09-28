@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-interface Stage {
-  price: number;
+export interface Stage {
+  price?: number;
   stage: number;
   name: string;
   image: string;
@@ -10,7 +10,7 @@ interface Stage {
   longDescription: string[];
 }
 
-interface PokemonContextType {
+export interface PokemonContextType {
   stages: Stage[] | null;
   setStages: (stages: Stage[] | null) => void;
 }

@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import AdminMint from '../components/Adminmint';
+import AdminMint from '../components/AdminMint';
 
 const AdminPage = () => {
   return (
